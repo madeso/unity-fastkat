@@ -15,7 +15,7 @@ public class PlaceObject : MonoBehaviour {
 	}
 
 	public void SetupInitialPosition(float x, float z) {
-		this.transform.position = new Vector3 (x, 0, z);
+		this.transform.position = new Vector3 (x, -20, -z);
 	}
 
 	void Place() {

@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour {
 	const int maxp = 8;
 	public float[] p;
 	public Vector3 ship = new Vector3(0,0,0);
-	public float fogdepth = 800;
+	public float fogdepth = 1000;
 	public float scale = 0.5f;
 	public float track;
 	public float speed = 80;
@@ -21,17 +21,20 @@ public class Spawner : MonoBehaviour {
 			p [i] = 0;
 		}
 
-		const int count = 2000;
+		const int count = 1500;
 		for (int i = 0; i < count; ++i) {
 			var o = GameObject.Instantiate (Object);
-			o.s = this;
-			o.SetupInitialPosition (30 * ((i%2) - 0.5f), fogdepth * ((float)i / count));
+			o.SetupInitialPosition (100 * ((i%2) - 0.5f), fogdepth * ((float)i / count));
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		UpdateTrack ();
+
+		RenderSettings.fog = true;
+		RenderSettings.fogEndDistance = fogdepth;
+		RenderSettings.fogStartDistance = fogdepth / 2;
 	}
 
 	public float TrackLength = 5;

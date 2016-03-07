@@ -14,9 +14,9 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
@@ -122,10 +122,10 @@ MonoBehaviour:
   - 0
   - 0
   ship: {x: 0, y: 0, z: 0}
-  fogdepth: 1200
-  scale: 0.2
+  fogdepth: 1000
+  scale: 0.5
   track: 0
-  speed: 200
+  speed: 350
   TrackLength: 1000
 --- !u!4 &50192121
 Transform:
@@ -187,8 +187,8 @@ Camera:
   m_GameObject: {fileID: 506366997}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
